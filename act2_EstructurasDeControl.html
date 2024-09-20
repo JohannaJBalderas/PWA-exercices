@@ -1,0 +1,22 @@
+<script>
+    var salario_diario = 200
+    var dias_trabajados = 6
+
+    monto = salario_diario * dias_trabajados;
+
+    if(monto <= 1000){
+        alert('Monto: $ '+ monto + '\n ¡Felicidades!  \n'+ 'Eres acreedor a una compensacion');
+        var compensacion
+        if(monto == 1000){
+            compensacion = 100
+        }else if (monto >= 500 && monto < 1000){
+            compensacion = 250
+        }else if(monto < 500){
+            compensacion = 200
+        }
+        alert('Salario: $' + monto + ' MXN' + '\n Compensacion: $'+ compensacion + ' MXN'+ '\n Salario total: $ ' + (monto + compensacion)+ ' MXN');
+    }else{
+        alert('Monto Total: $ '+ monto + ' \n No eres acreedor a una compensacion');
+    }
+    
+</script>
