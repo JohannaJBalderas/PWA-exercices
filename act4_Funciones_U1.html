@@ -1,0 +1,23 @@
+<script>
+    function salario(salario_diario, dias_trabajados){
+        monto = salario_diario * dias_trabajados;
+        if (monto <=1000){
+            compensacion = compensacionAsignada(monto)
+        }else{
+            return monto
+        }
+        return monto + compensacion;
+    }
+    function compensacionAsignada(monto){
+        if(monto == 1000){
+            compensacion = 100
+        }else if (monto >= 500 && monto < 1000){
+            compensacion = 250
+        }else if(monto < 500){
+            compensacion = 200
+        }
+        return compensacion;
+    }
+
+    document.write("El monto a pagar es:" + salario(200,3));
+</script>
