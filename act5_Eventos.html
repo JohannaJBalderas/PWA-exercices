@@ -1,0 +1,106 @@
+<!-- <button id="boton">  
+     Da click 
+</button>-->
+
+<!-- <h1>Ejemplo evento</h1> -->
+<!-- <p id="texto"> Pasa el ratón por aquí</p> -->
+
+<select name="Carrera" id="carrera">
+    <option selected value="0">Elige una opcion</option>
+        <optgroup label="TI">
+            <option value="1">Desarrollo de Software</option>
+            <option value="2">Entornos virtuales</option>    
+        </optgroup>
+        <optgroup label="Energias renovables">
+            <option value="3">Solar</option>
+            <option value="4">Turbo Energia</option>    
+        </optgroup>
+</select>
+
+<script>
+    /*function saludar(){
+        alert('Evento ejecutado con addEventListener')
+    }
+   document.getElementById('boton').addEventListener('click', saludar);*/
+    /*var contador = 0;
+    function mostrarMensaje(){
+        contador = contador + 1;
+        alert('Has pasado el ratón encima ' + contador+ ' veces');
+    }
+    document.getElementById('texto').addEventListener('mouseenter', mostrarMensaje);*/
+    /*function saludar(){
+        alert('hola!')
+        document.getElementById('boton').removeEventListener('click', saludar);
+        document.getElementById('boton').addEventListener('click', despedirte);
+    }
+    function despedirte(){
+        alert('Adios!')
+        document.getElementById('boton').removeEventListener('click', despedirte);
+        document.getElementById('boton').addEventListener('click', saludar);
+    }
+    document.getElementById('boton').addEventListener('click', saludar);*/
+
+
+    function elegirCarrera(){
+        seleccion = document.getElementById("carrera").value;
+        if(seleccion==0){
+            alert("Debes elegir una especialidad");
+        }else if(seleccion == 1){
+            alert("Inscrito a Desarrollo de Softaware Multiplataforma");
+        }else if(seleccion == 2){
+            alert("Inscrito a Entornos Virtuales y Negocios Digitales");
+        }else if(seleccion == 3){
+            alert("Inscrito a Solar");
+        }else{
+            alert("Inscrito a Turbo Energia");
+        }
+    }
+    document.getElementById('carrera').addEventListener('change', elegirCarrera);
+
+</script>
+
+<!-- EVENTO KEYDOWN SIN LISTENER 
+ <html>
+    <head>
+        <title>Ejemplo evento</title>
+    </head>
+    <body>
+        <p id="mensaje">Presiona la barra espaciadora</p>
+    
+        <script>
+            // Obtenemos el elemento <p> donde mostraremos el mensaje
+            const mensaje = document.getElementById('mensaje');
+
+            // Escuchamos el evento keydown en todo el documento
+            document.addEventListener('keydown', (event) => {
+            // Si la tecla presionada es la barra espaciadora
+            if (event.key === ' ') {
+                 alert("Haz presionado la barra espaciadora");
+            }
+            });
+        </script>
+    </body>
+</html>
+-->
+
+<!-- EVENTO KEYDOWN CON LISTENER 
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Juego Simple</title>
+</head>
+<body>
+    <input type="text" onkeydown="presionarTecla(event)">
+    <p id="mensaje">Presiona la barra espaciadora</p>
+
+    <script>
+        function presionarTecla(event) {
+            if (event.key === ' ') {
+                document.getElementById('mensaje')
+                alert('¡Felicidades! Presionaste la barra espaciadora.');
+            }
+        }
+    </script>
+</body>
+</html>
+-->
